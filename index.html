@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="sr" data-tenant="palloncino">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+    <meta name="description" content="Poruči picu iz Palloncino Pizzerie — više od pice, doživljaj za pamćenje. Stevana Ivanovića 14, Jagodina." />
+    <meta name="theme-color" content="#FBF5EF" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Palloncino" />
+    <link rel="icon" href="/palloncino-pizzeria/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/palloncino-pizzeria/apple-touch-icon.png" />
+    <title>Palloncino Pizzeria · Jagodina</title>
+    <style>
+      /* Splash painted before the JS bundle arrives (slow networks): brand colour + name, replaced by React. */
+      html, body, #root { height: 100%; margin: 0; }
+      body { background: var(--color-cream-100, #fff); }
+      .splash { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: var(--color-forest-800, #222); }
+      .splash-name { font-family: var(--font-display, sans-serif); font-weight: var(--display-weight, 400); font-size: calc(40px * var(--display-scale, 1)); letter-spacing: var(--display-tracking, 0.02em); text-transform: var(--display-case, none); }
+      .splash-sub { font: 600 12px -apple-system, BlinkMacSystemFont, system-ui, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.55; }
+    </style>
+  <style id="tenant-theme">
+ html[data-tenant="palloncino"] {
+  --color-cream-50: #FFFFFF;
+  --color-cream-100: #FBF5EF;
+  --color-cream-200: #F4E9DE;
+  --color-cream-300: #E9D9C9;
+  --color-cream-400: #CDB8A3;
+  --color-azure-100: #FDF1DA;
+  --color-azure-200: #F9DCA2;
+  --color-azure-300: #F4BC55;
+  --color-azure-400: #E7A43A;
+  --color-on-primary: #3A1E0C;
+  --color-forest-950: #1C100C;
+  --color-forest-900: #2A1A15;
+  --color-forest-800: #35221B;
+  --color-forest-700: #412A21;
+  --color-forest-600: #5C4237;
+  --color-forest-500: #7A5F53;
+  --color-forest-400: #9C8378;
+  --color-flame-100: #FCE4E4;
+  --color-flame-200: #F6B4B6;
+  --color-flame-500: #E41E26;
+  --color-flame-600: #C9181F;
+  --color-flame-700: #A61319;
+  --color-tomato-500: #D8432F;
+  --color-tomato-100: #FBE4DF;
+  --color-basil-500: #3F8A43;
+  --color-basil-100: #E1F0DF;
+  --color-ink: #2A1A15;
+  --color-ink-2: #6A5A52;
+  --color-ink-3: #A0918A;
+  --font-display: "Fredoka", "Arial Rounded MT Bold", "Helvetica Neue", Arial, sans-serif;
+  --display-scale: 0.86;
+  --display-tracking: 0.01em;
+  --display-case: uppercase;
+  --display-weight: 600;
+  --motif: radial-gradient(circle, rgba(228, 30, 38, 0.11) 0 6px, transparent 6.5px) 0 0 / 44px 44px, radial-gradient(circle, rgba(231, 164, 58, 0.24) 0 4px, transparent 4.5px) 22px 22px / 44px 44px, linear-gradient(#F4E9DE, #F4E9DE);
+  --glass-bg: rgba(251, 245, 239, 0.82);
+ }
+/* self-hosted display font (latin + latin-ext for Serbian diacritics); /palloncino-pizzeria/ is filled in by vite.config.ts.
+   Fredoka is a variable font: one file per subset covers the 500–700 weights used here. */
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url(/palloncino-pizzeria/fonts/fredoka-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url(/palloncino-pizzeria/fonts/fredoka-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+    <link rel="preload" as="image" href="/palloncino-pizzeria/pizzas/palloncino.webp" />
+    <link rel="preload" as="image" href="/palloncino-pizzeria/logo.webp" />
+    <script type="module" crossorigin src="/palloncino-pizzeria/assets/main-To-9uj4O.js"></script>
+    <link rel="stylesheet" crossorigin href="/palloncino-pizzeria/assets/main-Bhyrw_ey.css">
+  <link rel="manifest" href="/palloncino-pizzeria/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/palloncino-pizzeria/registerSW.js"></script></head>
+  <body>
+    <div id="root"><div class="splash"><span class="splash-name">Palloncino</span><span class="splash-sub">Učitavanje</span></div></div>
+  </body>
+</html>
